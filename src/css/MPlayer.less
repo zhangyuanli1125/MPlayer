@@ -1,0 +1,263 @@
+.MPlayer {
+  @font: 16;
+  @fontSize: 16px;
+  @controlHeight: 40px;
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .MPlayer-player {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - @controlHeight);
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .MPlayer-player-video {
+    float: left;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center center;
+  }
+
+  .MPlayer-player-state {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 55px !important;
+  }
+
+  .MPlayer-player-state-play {
+    background: url(../image/MPlayer-play.png) no-repeat center;
+  }
+
+  .MPlayer-player-state-pause {
+    background: url(../image/MPlayer-pause.png) no-repeat center;
+  }
+
+  .MPlayer-player-danmaku {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .MPlayer-player-danmaku .MPlayer-player-danmaku-row {
+    position: absolute;
+    left: 100%;
+    white-space: nowrap;
+    display: inline-block;
+    padding-right: 4px;
+    border-radius: 15px;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+  }
+
+  .MPlayer-player-danmaku .MPlayer-player-danmaku-row img {
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+
+  .MPlayer-control {
+    position: absolute;
+    height: @controlHeight;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #23272B;
+    transition: transform .5s ease-out, opacity .5s ease-out;
+  }
+
+  .MPlayer-control-not-active {
+    display: none !important;
+  }
+
+  .MPlayer-control-left {
+    float: left;
+    height: 100%;
+  }
+
+  .MPlayer-control-video {
+    float: left;
+    width: 22px;
+    height: 100%;
+    margin-left: 14px;
+    cursor: pointer;
+    background-size: 100% !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .MPlayer-control-video-play {
+    background: url(../image/MPlayer-video-play.png) no-repeat 0;
+  }
+
+  .MPlayer-control-video-pause {
+    background: url(../image/MPlayer-video-pause.png) no-repeat 0;
+  }
+
+  .MPlayer-control-video-reload {
+    float: left;
+    width: 27px;
+    height: 100%;
+    margin-left: 14px;
+    cursor: pointer;
+    background: url(../image/MPlayer-video-reload.png) no-repeat 0;
+    background-size: 100% !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .MPlayer-control-middle {
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+  }
+
+  .MPlayer-control-custom {
+    float: right;
+    text-align: center;
+    height: 100%;
+    margin-right: 14px;
+    display: table;
+  }
+
+  .MPlayer-control-custom-icon {
+    width: 25px;
+    height: 100%;
+    cursor: pointer;
+    background-size: 100% !important;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+  }
+
+  .MPlayer-control-custom-desc {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    color: #A6A6A6;
+    font-size: @fontSize;
+    padding-left: 5px;
+  }
+
+  .MPlayer-control-custom-comment-icon-1 {
+    background: url(../image/MPlayer-custom-comment-icon-1.png) no-repeat 0;
+  }
+
+  .MPlayer-control-custom-comment-icon-2 {
+    background: url(../image/MPlayer-custom-comment-icon-2.png) no-repeat 0;
+  }
+
+  .MPlayer-control-custom-hits-icon-1 {
+    background: url(../image/MPlayer-custom-hits-icon-1.png) no-repeat 0;
+  }
+
+  .MPlayer-control-custom-hits-icon-2 {
+    background: url(../image/MPlayer-custom-hits-icon-2.png) no-repeat 0;
+  }
+
+  .MPlayer-control-custom-collect-icon-1 {
+    background: url(../image/MPlayer-custom-collect-icon-1.png) no-repeat 0;
+  }
+
+  .MPlayer-control-custom-collect-icon-2 {
+    background: url(../image/MPlayer-custom-collect-icon-2.png) no-repeat 0;
+  }
+
+  .MPlayer-control-custom-upvote-icon-1 {
+    background: url(../image/MPlayer-custom-upvote-icon-1.png) no-repeat 0;
+  }
+
+  .MPlayer-control-custom-upvote-icon-2 {
+    background: url(../image/MPlayer-custom-upvote-icon-2.png) no-repeat 0;
+  }
+
+  .MPlayer-control-custom-live-icon-1 {
+    background: url(../image/MPlayer-custom-live-icon-1.png) no-repeat 0;
+  }
+
+  .MPlayer-control-custom-live-icon-2 {
+    background: url(../image/MPlayer-custom-live-icon-2.png) no-repeat 0;
+  }
+
+  .MPlayer-control-right {
+    float: right;
+    height: 100%;
+  }
+
+  .MPlayer-control-screen, .MPlayer-control-danmaku, .MPlayer-control-voice, .MPlayer-control-playback {
+    float: left;
+    width: 25px;
+    height: 100%;
+    margin-right: 14px;
+    cursor: pointer;
+    background-size: 100% !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .MPlayer-control-voice-open {
+    background: url(../image/MPlayer-voice-open.png) no-repeat 0;
+  }
+
+  .MPlayer-control-voice-close {
+    background: url(../image/MPlayer-voice-close.png) no-repeat 0;
+  }
+
+  .MPlayer-control-danmaku-open {
+    background: url(../image/MPlayer-danmaku-open.png) no-repeat 0;
+  }
+
+  .MPlayer-control-danmaku-close {
+    background: url(../image/MPlayer-danmaku-close.png) no-repeat 0;
+  }
+
+  .MPlayer-control-screen-full {
+    background: url(../image/MPlayer-screen-full.png) no-repeat 0;
+  }
+
+  .MPlayer-control-screen-middle {
+    background: url(../image/MPlayer-screen-middle.png) no-repeat 0;
+  }
+
+  .MPlayer-control-playback-1 {
+    background: url(../image/MPlayer-playback-1.png) no-repeat 0;
+  }
+
+  .MPlayer-control-playback-1-2 {
+    background: url(../image/MPlayer-playback-1.2.png) no-repeat 0;
+  }
+
+  .MPlayer-control-playback-1-5 {
+    background: url(../image/MPlayer-playback-1.5.png) no-repeat 0;
+  }
+
+  .MPlayer-control-playback-2 {
+    background: url(../image/MPlayer-playback-2.png) no-repeat 0;
+  }
+}
+
+.MPlayer-fullScreen {
+  position: fixed !important;
+  background-color: #474747;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.MPlayer-default .MPlayer-player-state, .MPlayer-default .MPlayer-control {
+  display: none !important;
+}
+
+.MPlayer-default .MPlayer-player {
+  height: 100% !important;
+}
